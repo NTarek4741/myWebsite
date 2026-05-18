@@ -179,7 +179,7 @@ h2.section-title em.purple{color:var(--purple);}
 .exp-card{position:relative;overflow:hidden;max-width:860px;
   background:rgba(255,255,255,.02);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);
   border:1px solid rgba(255,255,255,.06);border-radius:var(--r-lg);
-  box-shadow:0 8px 32px rgba(0,0,0,.25);transition:all .4s cubic-bezier(.4,0,.2,1);}
+  box-shadow:0 8px 32px rgba(0,0,0,.25);transition:all .4s cubic-bezier(.4,0,.2,1);margin-bottom:2rem;}
 .exp-card:hover{border-color:rgba(179,255,0,.15);background:rgba(179,255,0,.015);
   box-shadow:0 12px 40px rgba(0,0,0,.35),0 0 30px rgba(179,255,0,.04);transform:translateY(-2px);}
 .exp-card::before{content:'';position:absolute;top:0;left:0;width:2px;height:100%;
@@ -187,27 +187,46 @@ h2.section-title em.purple{color:var(--purple);}
 .exp-card::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;
   background:linear-gradient(90deg,transparent,rgba(179,255,0,.15),transparent);
   border-radius:var(--r-lg) var(--r-lg) 0 0;}
+.exp-card.alt::before{background:linear-gradient(180deg,var(--cyan),var(--purple),transparent);}
+.exp-card.alt::after{background:linear-gradient(90deg,transparent,rgba(0,245,255,.15),transparent);}
+.exp-card.alt:hover{border-color:rgba(0,245,255,.15);background:rgba(0,245,255,.015);
+  box-shadow:0 12px 40px rgba(0,0,0,.35),0 0 30px rgba(0,245,255,.04);}
+.exp-card.alt2::before{background:linear-gradient(180deg,var(--purple),var(--pink),transparent);}
+.exp-card.alt2::after{background:linear-gradient(90deg,transparent,rgba(168,85,247,.15),transparent);}
+.exp-card.alt2:hover{border-color:rgba(168,85,247,.15);background:rgba(168,85,247,.015);
+  box-shadow:0 12px 40px rgba(0,0,0,.35),0 0 30px rgba(168,85,247,.04);}
+
 .exp-header{padding:2rem 2.2rem 1.4rem;display:flex;justify-content:space-between;
   align-items:flex-start;flex-wrap:wrap;gap:1rem;border-bottom:1px solid rgba(255,255,255,.04);}
 .exp-role{font-size:1.4rem;font-weight:900;text-transform:uppercase;letter-spacing:.05em;color:var(--white);line-height:1;}
 .exp-company{font-size:.85rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);margin-top:.35rem;opacity:.8;}
+.exp-card.alt .exp-company{color:var(--cyan);}
+.exp-card.alt2 .exp-company{color:var(--purple);}
 .exp-meta{font-family:'Share Tech Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-align:right;color:var(--cyan);line-height:1.6;opacity:.8;}
 .exp-body{padding:1.6rem 2.2rem 2rem;}
 .exp-li{list-style:none;display:flex;flex-direction:column;gap:.7rem;}
 .exp-li li{font-size:.95rem;color:var(--muted2);line-height:1.7;padding-left:1.2rem;position:relative;}
 .exp-li li::before{content:'›';position:absolute;left:0;color:var(--lime);font-weight:900;}
+.exp-card.alt .exp-li li::before{color:var(--cyan);}
+.exp-card.alt2 .exp-li li::before{color:var(--purple);}
+
 
 /* PROJECTS */
 #projects{background:var(--surface);}
 .proj-card{position:relative;overflow:hidden;max-width:860px;
   background:rgba(255,255,255,.02);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);
   border:1px solid rgba(255,255,255,.06);border-radius:var(--r-lg);
-  box-shadow:0 8px 32px rgba(0,0,0,.25);transition:all .4s cubic-bezier(.4,0,.2,1);}
+  box-shadow:0 8px 32px rgba(0,0,0,.25);transition:all .4s cubic-bezier(.4,0,.2,1);margin-bottom:2rem;}
 .proj-card:hover{border-color:rgba(179,255,0,.2);background:rgba(179,255,0,.015);
   box-shadow:0 12px 40px rgba(0,0,0,.35),0 0 30px rgba(179,255,0,.04);transform:translateY(-2px);}
 .proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;
   background:linear-gradient(90deg,transparent,rgba(179,255,0,.2),rgba(0,245,255,.15),transparent);
   border-radius:var(--r-lg) var(--r-lg) 0 0;}
+.proj-card.alt:hover{border-color:rgba(0,245,255,.2);background:rgba(0,245,255,.015);
+  box-shadow:0 12px 40px rgba(0,0,0,.35),0 0 30px rgba(0,245,255,.04);}
+.proj-card.alt::before{background:linear-gradient(90deg,transparent,rgba(0,245,255,.2),rgba(168,85,247,.15),transparent);}
+
+
 .proj-header{padding:2rem 2.2rem 1.4rem;display:flex;justify-content:space-between;
   align-items:flex-start;flex-wrap:wrap;gap:1rem;border-bottom:1px solid rgba(255,255,255,.04);}
 .proj-num{font-family:'Share Tech Mono',monospace;font-size:.62rem;letter-spacing:.18em;color:var(--cyan);opacity:.7;}
@@ -218,6 +237,8 @@ h2.section-title em.purple{color:var(--purple);}
 .proj-links a:hover{border-color:var(--cyan);background:rgba(0,245,255,.06);box-shadow:0 0 12px rgba(0,245,255,.08);}
 .proj-body{padding:1.6rem 2.2rem 2rem;}
 .proj-name{font-size:1.5rem;font-weight:900;text-transform:uppercase;letter-spacing:.05em;color:var(--lime);margin-bottom:.7rem;}
+.proj-card.alt .proj-name{color:var(--cyan);}
+
 .proj-desc{font-size:.92rem;color:var(--muted2);line-height:1.8;margin-bottom:1.4rem;}
 .proj-desc strong.lime{color:var(--lime);}
 .proj-desc strong.cyan{color:var(--cyan);}
@@ -233,6 +254,8 @@ h2.section-title em.purple{color:var(--purple);}
 .tag.tv{color:rgba(168,85,247,.75);border-color:rgba(168,85,247,.15);background:rgba(168,85,247,.04);}
 .proj-bar{height:1px;width:0;background:linear-gradient(90deg,var(--lime),var(--cyan));
   border-radius:1px;transition:width .6s cubic-bezier(.4,0,.2,1);}
+.proj-card.alt .proj-bar{background:linear-gradient(90deg,var(--cyan),var(--purple));}
+
 .proj-card:hover .proj-bar{width:100%;}
 
 /* SKILLS */
@@ -353,7 +376,7 @@ footer{background:rgba(12,12,12,.8);backdrop-filter:blur(12px);-webkit-backdrop-
   <div class="hero-sidebar">
     <div class="hs-card">
       <div class="hs-val" style="color:var(--nyu);text-shadow:0 0 16px rgba(156,33,176,.35);">NYU</div>
-      <div class="hs-lab">BS Comp Sci</div>
+      <div class="hs-lab">BA Comp Sci</div>
     </div>
     <div class="hs-card">
       <div class="hs-val" style="color:var(--asu);text-shadow:0 0 16px rgba(211,47,47,.35);">ASU</div>
@@ -368,15 +391,15 @@ footer{background:rgba(12,12,12,.8);backdrop-filter:blur(12px);-webkit-backdrop-
 
 <div class="ticker">
   <div class="ticker-inner">
-    <span class="t-item">Python</span><span class="t-item">Rust</span>
+    <span class="t-item">Python</span><span class="t-item">C/C++</span>
     <span class="t-item">MLX · Apple Silicon</span><span class="t-item">FastAPI</span>
-    <span class="t-item">LLM Inference</span><span class="t-item">Go</span>
+    <span class="t-item">LLM Inference</span><span class="t-item">SQL</span>
     <span class="t-item">AI Agents</span><span class="t-item">PyTorch</span>
     <span class="t-item">VLMs</span><span class="t-item">REST APIs</span>
     <span class="t-item">Docker</span><span class="t-item">PostgreSQL</span>
-    <span class="t-item">Python</span><span class="t-item">Rust</span>
+    <span class="t-item">Python</span><span class="t-item">C/C++</span>
     <span class="t-item">MLX · Apple Silicon</span><span class="t-item">FastAPI</span>
-    <span class="t-item">LLM Inference</span><span class="t-item">Go</span>
+    <span class="t-item">LLM Inference</span><span class="t-item">SQL</span>
     <span class="t-item">AI Agents</span><span class="t-item">PyTorch</span>
     <span class="t-item">VLMs</span><span class="t-item">REST APIs</span>
     <span class="t-item">Docker</span><span class="t-item">PostgreSQL</span>
@@ -391,15 +414,15 @@ footer{background:rgba(12,12,12,.8);backdrop-filter:blur(12px);-webkit-backdrop-
     <h2 class="section-title">Building at the <em class="cyan">Edge</em> of ML</h2>
     <div class="about-grid reveal">
       <div class="about-body">
-        <p>I'm a software engineer focused on <strong class="cyan">machine learning systems</strong> and <strong class="lime">backend development</strong>, with a Bachelor's in Computer Science from <strong class="nyu">NYU</strong> and hands-on experience building production-ready inference servers, data pipelines, and agent workflows.</p>
-        <p>I completed an <strong class="lime">AI externship in collaboration with Wayfair</strong> through Extern, building AI agents and a live competitor intelligence dashboard for Wayfair's category team. I'm pursuing a <strong class="asu">Master's in Computer Science at ASU</strong> starting Fall 2026, with a focus on <strong class="purple">Machine Learning and Systems Programming</strong>.</p>
-        <p>I build things from scratch to understand them deeply — from custom <strong class="lime">HTTP inference daemons</strong> to <strong class="cyan">multimodal model pipelines</strong>. My target is AI/ML engineering at the intersection of systems, infrastructure, and applied machine learning.</p>
+        <p>I'm a software engineer focused on <strong class="cyan">AI systems, orchestrators, and infrastructure</strong>, with a Bachelor's in Computer Science from <strong class="nyu">NYU</strong> and an incoming focus on <strong class="purple">Machine Learning and Systems Programming</strong> for my <strong class="asu">Master's in Computer Science at ASU</strong> starting Fall 2026.</p>
+        <p>I have hands-on experience building production-ready inference servers, custom data pipelines, and agent workflows. Recently, I completed an <strong class="lime">AI Automation Externship in collaboration with Wayfair</strong>, deploying AI agents for competitor intelligence and live dashboards. I am also currently an <strong class="cyan">Ambassador for Daedalus Labs</strong>, building intelligent task-specific Python agents.</p>
+        <p>I build things from scratch to understand them deeply — from custom <strong class="lime">HTTP inference daemons</strong> to <strong class="cyan">multimodal model orchestrators</strong>. My target is an AI/ML engineering role at the intersection of systems, infrastructure, and applied machine learning.</p>
       </div>
       <div class="stats-panel">
         <div class="stat-grid">
           <div class="stat-item"><div class="stat-n" style="color:var(--nyu)">NYU</div><div class="stat-l">BA Comp Sci</div></div>
           <div class="stat-item"><div class="stat-n" style="color:var(--asu)">ASU</div><div class="stat-l">MSCS · Fall '26</div></div>
-          <div class="stat-item"><div class="stat-n" style="color:var(--cyan)">AI</div><div class="stat-l">Extern · Wayfair</div></div>
+          <div class="stat-item"><div class="stat-n" style="color:var(--cyan)">NASA</div><div class="stat-l">L'Space MCA</div></div>
           <div class="stat-item"><div class="stat-n" style="color:var(--lime)">MLX</div><div class="stat-l">Inference Engine</div></div>
           <div class="stat-item"><div class="stat-n" style="color:var(--purple)">ML</div><div class="stat-l">Focus Area</div></div>
           <div class="stat-item"><div class="stat-n" style="color:var(--cyan)">ARM</div><div class="stat-l">Apple Silicon</div></div>
@@ -415,20 +438,54 @@ footer{background:rgba(12,12,12,.8);backdrop-filter:blur(12px);-webkit-backdrop-
   <div class="section-inner">
     <div class="label lime">Field Record</div>
     <h2 class="section-title">Work <em class="lime">Experience</em></h2>
-    <div class="exp-card reveal">
+    
+     <div class="exp-card reveal">
       <div class="exp-header">
         <div class="exp-title-block">
-          <div class="exp-role">AI Extern</div>
-          <div class="exp-company">Extern AI Externship in Collaboration with Wayfair</div>
+          <div class="exp-role">Computer and Hardware Track</div>
+          <div class="exp-company">NASA L'Space Mission Concept Academy (MCA)</div>
+        </div>
+        <div class="exp-meta">Expected Summer 2026<br/>Remote</div>
+      </div>
+      <div class="exp-body">
+        <ul class="exp-li">
+          <li>Selected for an upcoming NASA-sponsored workforce academy focused on conceptual aerospace mission design and hardware lifecycle planning.</li>
+          <li>Will collaborate with interdisciplinary teams to conduct hardware trade studies and define mission subsystem requirements.</li>
+          <li>Will document hardware-software integration and system lifecycles according to strict aerospace industry standards.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-card alt reveal">
+      <div class="exp-header">
+        <div class="exp-title-block">
+          <div class="exp-role">Ambassador</div>
+          <div class="exp-company">Daedalus Labs</div>
+        </div>
+        <div class="exp-meta">2026 – Present<br/>Remote</div>
+      </div>
+      <div class="exp-body">
+        <ul class="exp-li">
+          <li>Developing intelligent, task-specific agents using Python and sandboxed execution environments.</li>
+          <li>Authoring comprehensive, developer-focused technical blog posts to document agent architecture, tool integration, and usage.</li>
+          <li>Building processing pipelines featuring asynchronous API integration and automated JSON/Markdown data validation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-card alt2 reveal">
+      <div class="exp-header">
+        <div class="exp-title-block">
+          <div class="exp-role">Wayfair AI Automation Engineer</div>
+          <div class="exp-company">Extern</div>
         </div>
         <div class="exp-meta">Oct 2025 – Dec 2025<br/>Remote</div>
       </div>
       <div class="exp-body">
         <ul class="exp-li">
-          <li>Designed and deployed multiple <strong style="color:var(--lime)">AI agents</strong> using <strong style="color:var(--cyan)">n8n</strong> to automate category management workflows for one of the world's largest home retailers, operating across a catalog of <strong style="color:var(--lime)">30M+ products</strong>.</li>
-          <li>Built a <strong style="color:var(--cyan)">competitor intelligence pipeline</strong> continuously tracking rival product launches, pricing updates, and marketing campaigns, surfacing real-time benchmarks to inform category strategy.</li>
-          <li>Automated <strong style="color:var(--purple)">marketing content generation</strong> via AI agents, enabling the category team to act on trend signals before they peaked.</li>
-          <li>Delivered a <strong style="color:var(--lime)">live, auto-updating dashboard</strong> consolidating trend signals, competitor benchmarks, and AI-generated content suggestions for direct use by category managers.</li>
+          <li>Built multiple AI agents using n8n to automate workflows for trend detection, competitor tracking, and marketing generation.</li>
+          <li>Extracted structured insights from competitor pricing and launches to conduct in-depth trend analysis across the home goods sector.</li>
+          <li>Consolidated automated agent outputs into a live-updating dashboard, integrating competitive benchmarks to support strategic decision-making.</li>
         </ul>
       </div>
     </div>
@@ -440,7 +497,8 @@ footer{background:rgba(12,12,12,.8);backdrop-filter:blur(12px);-webkit-backdrop-
 <section id="projects">
   <div class="section-inner">
     <div class="label cyan">Deployed Systems</div>
-    <h2 class="section-title">Featured <em class="cyan">Project</em></h2>
+    <h2 class="section-title">Featured <em class="cyan">Projects</em></h2>
+    
     <div class="proj-card reveal">
       <div class="proj-header">
         <div class="proj-num">PROJECT // 01</div>
@@ -449,18 +507,38 @@ footer{background:rgba(12,12,12,.8);backdrop-filter:blur(12px);-webkit-backdrop-
         </div>
       </div>
       <div class="proj-body">
-        <div class="proj-name">mlx-nim</div>
-        <p class="proj-desc">A local <strong class="lime">LLM/VLM inference server</strong> for <strong class="cyan">Apple Silicon</strong> — no cloud, no telemetry, no data leaving your machine. Exposes <strong class="lime">three simultaneous API surfaces</strong> (OpenAI-compatible, Anthropic-compatible, Ollama-compatible) from a single FastAPI server, requiring careful <strong class="cyan">cross-API type mapping</strong> and schema normalization across divergent API contracts. Supports streaming, tool calling, structured JSON output, vision inputs, KV cache quantization, and speculative decoding. Benchmarked at <strong class="lime">2.4× faster prompt processing</strong> vs. Ollama (201 t/s vs. 85 t/s) and <strong class="cyan">2.2× faster tool-call generation</strong> (41 t/s vs. 19 t/s).</p>
+        <div class="proj-name">MLX-NIM</div>
+        <p class="proj-desc">A highly optimized, local <strong class="lime">LLM/VLM inference server</strong> for <strong class="cyan">Apple Silicon</strong> Macs using Python and Apple's MLX framework to ensure fast, on-device execution with complete data privacy. Architected a unified multi-protocol HTTP server that simultaneously speaks OpenAI, Anthropic, and custom API formats, allowing seamless integration with diverse clients (Claude Code, n8n) without modification. Implemented advanced capabilities including streaming, tool calling, vision processing, structured JSON output, and speculative decoding. Conducted system benchmarks demonstrating superior prompt processing performance (up to <strong class="lime">500+ tokens/s</strong>) compared to standard quantization engines.</p>
         <div class="proj-tags">
           <span class="tag tl">Python</span>
           <span class="tag tl">FastAPI</span>
-          <span class="tag tc">MLX</span>
+          <span class="tag tc">Apple MLX</span>
           <span class="tag tl">mlx-lm</span>
           <span class="tag tv">mlx-vlm</span>
           <span class="tag tc">OpenAI API</span>
           <span class="tag tl">Anthropic API</span>
-          <span class="tag tv">KV Cache</span>
           <span class="tag tc">Speculative Decoding</span>
+        </div>
+        <div class="proj-bar"></div>
+      </div>
+    </div>
+
+    <div class="proj-card alt reveal">
+      <div class="proj-header">
+        <div class="proj-num">PROJECT // 02</div>
+        <div class="proj-links">
+          <a href="https://github.com/NTarek4741/obsidian-agent" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Obsidian Agent</div>
+        <p class="proj-desc">A rich terminal UI (TUI) orchestrator using Python, <strong class="cyan">prompt_toolkit</strong>, and rich, featuring specialized <strong class="purple">AI personas</strong> for automated transcription, deep web research, and visual mapping. Engineered a <strong class="cyan">sandboxed filesystem toolset</strong> that safely enables AI agents to autonomously read, write, parse YAML frontmatter, and manipulate local Obsidian vault data. Designed multi-stage AI pipelines utilizing a planner/executor architecture to generate full college-semester curriculums and autonomously construct native radial <strong class="cyan">.canvas</strong> mind maps. Integrated Model Context Protocol (MCP) servers (Brave, Exa) for real-time web research.</p>
+        <div class="proj-tags">
+          <span class="tag tc">Python</span>
+          <span class="tag tc">prompt_toolkit</span>
+          <span class="tag tv">AI Agents</span>
+          <span class="tag tc">Sandboxed Execution</span>
+          <span class="tag tc">MCP Servers</span>
         </div>
         <div class="proj-bar"></div>
       </div>
@@ -479,43 +557,19 @@ footer{background:rgba(12,12,12,.8);backdrop-filter:blur(12px);-webkit-backdrop-
         <div class="skill-label">Languages</div>
         <div class="chips">
           <span class="chip lime">Python</span>
-          <span class="chip cyan">Rust</span>
-          <span class="chip lime">Go</span>
-          <span class="chip cyan">SQL</span>
+          <span class="chip cyan">C/C++</span>
+          <span class="chip lime">SQL</span>
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-label">Frameworks &amp; Libraries</div>
+        <div class="skill-label">Systems & Infrastructure</div>
         <div class="chips">
-          <span class="chip lime">FastAPI</span>
-          <span class="chip cyan">PyTorch</span>
-          <span class="chip lime">MLX</span>
-          <span class="chip cyan">scikit-learn</span>
-          <span class="chip lime">NumPy</span>
-          <span class="chip purple">pandas</span>
-          <span class="chip cyan">Tokio</span>
-          <span class="chip lime">Serde</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-label">Developer Tools &amp; Infrastructure</div>
-        <div class="chips">
-          <span class="chip lime">Git</span>
-          <span class="chip cyan">Docker</span>
-          <span class="chip lime">Google Cloud</span>
-          <span class="chip cyan">PostgreSQL</span>
-          <span class="chip lime">Cargo</span>
-          <span class="chip cyan">uv</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-label">AI &amp; ML</div>
-        <div class="chips">
-          <span class="chip lime">LLM / VLM Inference</span>
-          <span class="chip cyan">AI Agent Orchestration</span>
-          <span class="chip lime">REST API Design</span>
-          <span class="chip purple">Model Context Protocol</span>
-          <span class="chip cyan">OpenAI / Anthropic API</span>
+          <span class="chip lime">Linux/Unix</span>
+          <span class="chip cyan">Networking Protocols</span>
+          <span class="chip lime">Docker</span>
+          <span class="chip cyan">Git</span>
+          <span class="chip lime">AWS</span>
+          <span class="chip purple">GCP</span>
         </div>
       </div>
     </div>
@@ -532,14 +586,14 @@ footer{background:rgba(12,12,12,.8);backdrop-filter:blur(12px);-webkit-backdrop-
       <div class="edu-card asu">
         <div class="edu-deg">Master's in Computer Science</div>
         <div class="edu-inst">Arizona State University</div>
-        <div class="edu-date">Expected May 2028 · Tempe, AZ</div>
-        <div class="edu-note">Focus: Machine Learning &amp; Systems Programming. Relevant coursework: Data Mining, Parallel Computing, Artificial Intelligence, Programming Languages.</div>
+        <div class="edu-date">2026 – 2028 · Tempe, AZ</div>
+        <div class="edu-note">Related Coursework: Data Structures, Algorithms, Computer Architecture, Operating Systems, Computer Graphics, Cryptography, Artificial Intelligence, Computer Security.</div>
       </div>
       <div class="edu-card nyu">
         <div class="edu-deg">Bachelor's in Computer Science</div>
         <div class="edu-inst">New York University</div>
-        <div class="edu-date">Graduated May 2025 · New York, NY</div>
-        <div class="edu-note">Relevant coursework: Artificial Intelligence, Data Structures, Algorithms, Computer Systems, Operating Systems, Compilers, Computer Security.</div>
+        <div class="edu-date">2021 – 2025 · New York, NY</div>
+         <div class="edu-note">Related Coursework: Data Structures, Algorithms, Computer Architecture, Operating Systems, Computer Graphics, Cryptography, Artificial Intelligence, Computer Security.</div>
       </div>
     </div>
   </div>
@@ -551,7 +605,7 @@ footer{background:rgba(12,12,12,.8);backdrop-filter:blur(12px);-webkit-backdrop-
   <div class="section-inner">
     <div class="label lime" style="justify-content:center;">Open Channel</div>
     <h2 class="section-title" style="text-align:center;"><em class="lime">Connect</em></h2>
-    <p class="contact-sub">Actively seeking <strong class="cyan">entry-level ML engineering</strong> and <strong class="lime">software engineering</strong> roles. Open to <strong class="purple">MLOps</strong>, backend, and systems positions — remote or on-site.</p>
+    <p class="contact-sub">Actively seeking <strong class="cyan">entry-level AI/ML engineering</strong> and <strong class="lime">software engineering</strong> roles. Open to <strong class="purple">Systems Architecture</strong>, backend, and infrastructure positions — remote or on-site.</p>
     <div class="contact-links">
       <a href="https://github.com/NTarek4741" class="c-link cl1" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
